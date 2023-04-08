@@ -5,11 +5,12 @@ class ListNode(var num: Int) {
 
 }
 
-//到最后会有NullPointerException
 fun ListNode.getString(): Unit {
     var innode = this;
-    while (innode != null) {
+    while (innode.next != null) {
         println(innode.num)
         innode = innode.next!!
     }
+    //增加最后一个节点
+    println(innode.num)
 }
