@@ -29,11 +29,15 @@ class No0001 {
 //输出：[0,1]
     fun twoSum(nums: IntArray, target: Int): IntArray {
         val hashMap = HashMap<Int, Int>()
+        //遍历目标数组
         for (index in nums.withIndex()) {
+            //当前数字需要的数字
             val i = target - index.value
             if (hashMap.contains(i)) {
+                //存在当前下标数字所有需要的数字 即符合要求 返回那个需要数字的原始数字的下标 和当前下标
                 return intArrayOf(hashMap[i]!!, index.index)
             } else {
+                //如果不存在 当前下标数字对应需要的数字 就存需要的数字和当前下标
                 hashMap[index.value] = index.index
             }
         }

@@ -31,6 +31,7 @@ class No0002 {
     fun addTwoNumbers(l1: ListNode?, l2: ListNode?): ListNode? {
         //最终node
         val node = ListNode(0)
+        //工作节点
         var innode = node
         //处理特殊情况
         if (l1 == null && l2 == null) return null
@@ -38,12 +39,17 @@ class No0002 {
         if (l2 == null) return l1
         //进位数
         var count = 0
+        //目标数组的工作节点
         var node1 = l1
         var node2 = l2
         while (node1 != null || node2 != null) {
+            //节点值计算
             val nums = (node1?.num ?: 0) + (node2?.num ?: 0) + count
+            //计算进位
             count = nums / 10
+            //创建目标节点的下节点
             innode.next = ListNode(nums % 10)
+            //将目标节点的下节点赋值为当前节点
             innode = innode.next!!
             node1 = node1?.next
             node2 = node2?.next

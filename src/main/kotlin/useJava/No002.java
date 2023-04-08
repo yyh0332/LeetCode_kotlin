@@ -13,26 +13,35 @@ public class No002 {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         //最终node
         ListNode listNodeJ = new ListNode(0);
+        //工作节点
         ListNode cur = listNodeJ;
+        //判断特殊情况
         if (l1 == null && l2 == null) return null;
         if (l1 == null) return l2;
         if (l2 == null) return l1;
+        //进位
         int count = 0;
         while (l1 != null || l2 != null) {
+            //取出节点值
             int var1 = l1 == null ? 0 : l1.getNum();
             int var2 = l2 == null ? 0 : l2.getNum();
+            //计算当前节点值
             int sum = var1 + var2 + count;
+            //计算进位
             count = sum / 10;
+            //创建工作节点的下一个节点 且赋值
             cur.setNext(new ListNode(sum % 10));
+            //将下节点赋值为当前工作节点
             cur = cur.getNext();
+            //目标链表将下个节点赋值为当前作节点
             if (l1 != null) {
                 l1 = l1.getNext();
             }
             if (l2 != null) {
                 l2 = l2.getNext();
             }
-
         }
+        //处理特殊情况：进位未使用完,即加到最后一个节点
         if (count == 1) {
             cur.setNext(new ListNode(1));
         }
