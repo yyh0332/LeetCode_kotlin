@@ -1,2 +1,7 @@
 # LeetCode_kotlin
-kotlin for LeetCode
+## 001 两数之和
+数组 哈希表
+## 002 两数相加
+链表
+## 003 无重复字符的最长子串
+滑动窗口 哈希表
