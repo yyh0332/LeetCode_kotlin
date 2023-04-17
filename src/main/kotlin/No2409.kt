@@ -52,6 +52,30 @@ class No2409 {
             days + 1
         }
     }
+
+    /*
+    * 执行耗时:164 ms,击败了100.00% 的Kotlin用户
+	* 内存消耗:32.8 MB,击败了100.00% 的Kotlin用户
+	* */
+    fun countDaysTogether2(arriveAlice: String, leaveAlice: String, arriveBob: String, leaveBob: String): Int {
+        val days = intArrayOf(-1, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31)
+        val arr = if (arriveAlice < arriveBob) arriveBob else arriveAlice
+        val lea = if (leaveAlice < leaveBob) leaveAlice else leaveBob
+        //特殊情况处理
+        if (arr > lea) return 0
+        val aM = arr.substring(0, 2).toInt()
+        var aD = arr.substring(3).toInt()
+        val lM = lea.substring(0, 2).toInt()
+        var lD = lea.substring(3).toInt()
+        for (i in 1 until aM) {
+            aD += days[i]
+        }
+        for (i in 1 until lM) {
+            lD += days[i]
+        }
+        return lD - aD + 1
+    }
+
 }
 
 fun main() {
