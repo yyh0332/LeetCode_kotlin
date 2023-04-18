@@ -5,7 +5,7 @@ class ListNode(var num: Int) {
 
 }
 
-fun ListNode.getString(): Unit {
+fun ListNode.getString() {
     var innode = this;
     while (innode.next != null) {
         println(innode.num)
