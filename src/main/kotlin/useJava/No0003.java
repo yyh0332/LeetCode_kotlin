@@ -22,7 +22,7 @@ import java.util.HashMap;
  * 0 <= s.length <= 5 * 10⁴
  * s 由英文字母、数字、符号和空格组成
  */
-public class No003 {
+public class No0003 {
     /*执行耗时:4 ms,击败了86.42% 的Java用户
      * 内存消耗:41.5 MB,击败了72.98% 的Java用户*/
     public int lengthOfLongestSubstring(String s) {
@@ -54,7 +54,7 @@ public class No003 {
     }
 
     public static void main(String[] args) {
-        int length = new No003().lengthOfLongestSubstring("abba");
+        int length = new No0003().lengthOfLongestSubstring("abba");
         System.out.println(length);
     }
 }

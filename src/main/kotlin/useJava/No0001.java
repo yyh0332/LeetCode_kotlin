@@ -7,7 +7,7 @@ import java.util.HashMap;
  * 你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。
  * 你可以按任意顺序返回答案。
  */
-class No001 {
+class No0001 {
 
     /**
      * 执行耗时:58 ms,击败了14.33% 的Java用户
@@ -46,7 +46,7 @@ class No001 {
 
     public static void main(String[] args) {
         int[] a = new int[]{2, 5, 5, 11};
-        int[] ints = new No001().twoSum2(a, 10);
+        int[] ints = new No0001().twoSum2(a, 10);
         for (int i : ints) {
             System.out.println(i);
         }

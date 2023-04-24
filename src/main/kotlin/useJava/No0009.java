@@ -16,7 +16,7 @@ package useJava;
  * 输出：false
  * 解释：从右向左读, 为 01 。因此它不是一个回文数。
  */
-public class No009 {
+public class No0009 {
     /**
      * 暴力
      * 执行耗时:6 ms,击败了56.57% 的Java用户
@@ -98,7 +98,7 @@ public class No009 {
     }
 
     public static void main(String[] args) {
-        boolean palindrome = new No009().isPalindrome3(10);
+        boolean palindrome = new No0009().isPalindrome3(10);
         System.out.println(palindrome);
     }
 }

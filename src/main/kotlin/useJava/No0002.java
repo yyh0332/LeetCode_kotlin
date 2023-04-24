@@ -7,7 +7,7 @@ import base.ListNode;
  * 请你将两个数相加，并以相同形式返回一个表示和的链表。
  * 你可以假设除了数字 0 之外，这两个数都不会以 0 开头。
  */
-public class No002 {
+public class No0002 {
     /*执行耗时:1 ms,击败了100.00% 的Java用户
     内存消耗:41.3 MB,击败了77.84% 的Java用户*/
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
@@ -63,7 +63,7 @@ public class No002 {
         listNodeJ1.getNext().getNext().setNext(new ListNode(9));
 //        listNodeJ1.getNext().setNext(new ListNode(4));
 
-        ListNode listNodeJ2 = new No002().addTwoNumbers(listNodeJ, listNodeJ1);
+        ListNode listNodeJ2 = new No0002().addTwoNumbers(listNodeJ, listNodeJ1);
         System.out.println(listNodeJ2);
     }
 }
