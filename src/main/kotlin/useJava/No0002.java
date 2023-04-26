@@ -49,21 +49,7 @@ public class No0002 {
     }
 
     public static void main(String[] args) {
-        ListNode listNodeJ = new ListNode(9);
-        listNodeJ.setNext(new ListNode(9));
-        listNodeJ.getNext().setNext(new ListNode(9));
-        listNodeJ.getNext().getNext().setNext(new ListNode(9));
-        listNodeJ.getNext().getNext().getNext().setNext(new ListNode(9));
-        listNodeJ.getNext().getNext().getNext().getNext().setNext(new ListNode(9));
-        listNodeJ.getNext().getNext().getNext().getNext().getNext().setNext(new ListNode(9));
-
-        ListNode listNodeJ1 = new ListNode(9);
-        listNodeJ1.setNext(new ListNode(9));
-        listNodeJ1.getNext().setNext(new ListNode(9));
-        listNodeJ1.getNext().getNext().setNext(new ListNode(9));
-//        listNodeJ1.getNext().setNext(new ListNode(4));
-
-        ListNode listNodeJ2 = new No0002().addTwoNumbers(listNodeJ, listNodeJ1);
-        System.out.println(listNodeJ2);
+        ListNode listNodeJ2 = new No0002().addTwoNumbers(ListNode.Companion.getSampleListNode().get(0), ListNode.Companion.getSampleListNode().get(1));
+        listNodeJ2.getString();
     }
 }
