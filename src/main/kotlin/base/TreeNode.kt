@@ -6,6 +6,11 @@ class TreeNode(var `val`: Int) {
 
     companion object {
         fun getSampleTree(): TreeNode {
+            //              11
+            //          /         \
+            //        22           33
+            //         \          /
+            //          44      55
             val treeNode = TreeNode(11)
             val treeNode2 = TreeNode(22)
             val treeNode3 = TreeNode(33)
